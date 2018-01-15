@@ -1,171 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.varshayadv.newquizeapp.MainActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
-        android:text="..Welcome to maths Quiz.."
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textAllCaps="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text="..Welcome to maths Quiz.."
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1. Square root of 144"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="4dp"
-        android:textStyle="italic"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="20dp"
+            android:text="1. Square root of 144"
+            android:textSize="20dp"
+            android:textStyle="italic" />
 
-    <EditText
-        android:id="@+id/edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Please enter your answer"
-        android:textSize="25sp"
-        android:textColor="@android:color/black"/>
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Please enter your answer"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/edit_answer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" "
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="6dp"
-        />
+        <TextView
+            android:id="@+id/edit_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"
+            android:text=" " />
 
-    <Button
-        android:id="@+id/edit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="click here to check your answer is wrong or right"
-        android:background="@android:color/holo_orange_light"
-        android:onClick="editanswer"/>
+        <Button
+            android:id="@+id/edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="editanswer"
+            android:text="click here to check your answer is wrong or right" />
 
-    <!--se-->
-    <TextView
-        android:id="@+id/question_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="17 times 50"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="4dp"
-        android:textStyle="italic"
-        android:textColor="@android:color/black"/>
+        <!--sd-->
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <CheckBox
-        android:id="@+id/first_question_option1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="856"
-        android:onClick="Check1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:text="84 times 84"
+                android:textSize="20dp"
+                android:textStyle="italic" />
 
-    <CheckBox
-        android:id="@+id/first_question_option2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="6dp"
-        android:text="850"
-        android:onClick="Check"/>
-    <TextView
-        android:id="@+id/youranswer_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your answer is.."
-        />
-    <TextView
-        android:id="@+id/first_question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" "
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="6dp"
-        />
+            <RadioButton
+                android:id="@+id/radio_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="4567" />
 
-    <Button
-        android:id="@+id/answer_first_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="click here to check your answer is wrong or right"
-        android:background="@android:color/holo_orange_light"
-        android:onClick="TheAnswer"/>
+            <RadioButton
+                android:id="@+id/radio_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="7046" />
 
-    <!--for second question-->
+            <TextView
+                android:id="@+id/radio_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="4dp"
+                android:text=" " />
 
-    <TextView
-        android:id="@+id/question_Two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5 times 5"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="4dp"
-        android:textStyle="italic"
-        android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="RadioButton"
+                android:text="click here to check your answer is wrong or right" />
 
-    <CheckBox
-        android:id="@+id/second_question_option1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="25"
-        android:onClick="Check1"/>
 
-    <CheckBox
-        android:id="@+id/second_question_option2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="6dp"
-        android:text="35"
-        android:onClick="Check"/>
-    <TextView
-        android:id="@+id/youranswerTwo_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your answer is.."
-        />
-    <TextView
-        android:id="@+id/second_question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" "
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="6dp"
-        />
+        </RadioGroup>
 
-    <Button
-        android:id="@+id/answer_second_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="click here to check your answer is wrong or right"
-        android:background="@android:color/holo_orange_light"
-        android:onClick="TheAnswerSecond"/>
+
+        <TextView
+            android:id="@+id/question_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="20dp"
+            android:text="17 times 50"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/first_question_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="Check1"
+            android:text="856" />
+
+        <CheckBox
+            android:id="@+id/first_question_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:onClick="Check"
+            android:text="850" />
+
+        <TextView
+            android:id="@+id/first_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"
+            android:text=" " />
+
+        <Button
+            android:id="@+id/answer_first_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="TheAnswer"
+            android:text="click here to check your answer is wrong or right" />
+
+        <!--for second question-->
+
+        <TextView
+            android:id="@+id/question_Two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="20dp"
+            android:text="5 times 5"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/second_question_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="Check1"
+            android:text="25" />
+
+        <CheckBox
+            android:id="@+id/second_question_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:onClick="Check"
+            android:text="35" />
+
+        <TextView
+            android:id="@+id/youranswerTwo_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your answer is.." />
+
+        <TextView
+            android:id="@+id/second_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"
+            android:text=" " />
+
+        <Button
+            android:id="@+id/answer_second_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="TheAnswerSecond"
+            android:text="click here to check your answer is wrong or right" />
 
     </LinearLayout>
+
 
 </ScrollView>
