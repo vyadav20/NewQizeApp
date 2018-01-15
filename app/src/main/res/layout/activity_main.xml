@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.varshayadv.newquizeapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="..Welcome to maths Quiz.."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAllCaps="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Square root of 144"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:textStyle="italic"
+        />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Please enter your answer"
+        android:textSize="25sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/edit_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="6dp"
+        />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click here to check your answer is wrong or right"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="editanswer"/>
+
+    <!--se-->
+    <TextView
+        android:id="@+id/question_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="17 times 50"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:textStyle="italic"
+        android:textColor="@android:color/black"/>
+
+    <CheckBox
+        android:id="@+id/first_question_option1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="856"
+        android:onClick="Check1"/>
+
+    <CheckBox
+        android:id="@+id/first_question_option2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="6dp"
+        android:text="850"
+        android:onClick="Check"/>
+    <TextView
+        android:id="@+id/youranswer_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your answer is.."
+        />
+    <TextView
+        android:id="@+id/first_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="6dp"
+        />
+
+    <Button
+        android:id="@+id/answer_first_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click here to check your answer is wrong or right"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="TheAnswer"/>
+
+    <!--for second question-->
+
+    <TextView
+        android:id="@+id/question_Two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 times 5"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:textStyle="italic"
+        android:textColor="@android:color/black"/>
+
+    <CheckBox
+        android:id="@+id/second_question_option1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="25"
+        android:onClick="Check1"/>
+
+    <CheckBox
+        android:id="@+id/second_question_option2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="6dp"
+        android:text="35"
+        android:onClick="Check"/>
+    <TextView
+        android:id="@+id/youranswerTwo_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your answer is.."
+        />
+    <TextView
+        android:id="@+id/second_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="6dp"
+        />
+
+    <Button
+        android:id="@+id/answer_second_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click here to check your answer is wrong or right"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="TheAnswerSecond"/>
+
+    </LinearLayout>
+
+</ScrollView>
