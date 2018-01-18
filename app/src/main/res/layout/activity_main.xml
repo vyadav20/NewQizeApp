@@ -28,7 +28,8 @@
             android:layout_marginBottom="4dp"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="20dp"
-            android:text="1. Square root of 144"
+            android:text="Q1.  Square root of 144"
+            android:textColor="@android:color/black"
             android:textSize="20dp"
             android:textStyle="italic" />
 
@@ -54,33 +55,33 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_light"
             android:onClick="editanswer"
-            android:text="click here to check your answer is wrong or right" />
+            android:text="Check Answer" />
 
-        <!--sd-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="20dp"
+            android:text="Q2.  84 times 84"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
         <RadioGroup
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="20dp"
-                android:text="84 times 84"
-                android:textSize="20dp"
-                android:textStyle="italic" />
-
             <RadioButton
-                android:id="@+id/radio_one"
+                android:id="@+id/radioone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onRadioButtonClicked"
                 android:text="4567" />
 
             <RadioButton
-                android:id="@+id/radio_two"
+                android:id="@+id/radiotwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onRadioButtonClicked"
@@ -92,16 +93,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:layout_marginTop="4dp"
-                android:text=" " />
-
-            <Button
-                android:id="@+id/radio_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_orange_light"
-                android:onClick="RadioButton"
-                android:text="click here to check your answer is wrong or right" />
-
+                android:text=" "
+                android:textColor="@android:color/black" />
 
         </RadioGroup>
 
@@ -113,7 +106,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="20dp"
-            android:text="17 times 50"
+            android:text="Q3.  17 times 50"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="italic" />
@@ -150,9 +143,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_light"
             android:onClick="TheAnswer"
-            android:text="click here to check your answer is wrong or right" />
-
-        <!--for second question-->
+            android:text="Check Answer" />
 
         <TextView
             android:id="@+id/question_Two"
@@ -161,7 +152,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="20dp"
-            android:text="5 times 5"
+            android:text="Q4.  5 times 5"
             android:textColor="@android:color/black"
             android:textSize="20dp"
             android:textStyle="italic" />
@@ -185,12 +176,6 @@
             android:text="35" />
 
         <TextView
-            android:id="@+id/youranswerTwo_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your answer is.." />
-
-        <TextView
             android:id="@+id/second_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -204,7 +189,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_light"
             android:onClick="TheAnswerSecond"
-            android:text="click here to check your answer is wrong or right" />
+            android:text="Check Answer" />
 
     </LinearLayout>
 

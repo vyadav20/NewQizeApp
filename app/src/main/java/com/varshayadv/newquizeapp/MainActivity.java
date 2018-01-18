@@ -8,10 +8,14 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import static com.varshayadv.newquizeapp.R.id.radio_question;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText text;
-    CheckBox optionOne, optionTwo, optionOneForSecond, optionTwoForSecond, radioone, radiotwo;
+    TextView final_result;
+    CheckBox optionOne, optionTwo, optionOneForSecond, optionTwoForSecond;
+    RadioButton radioone, radiotwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         text = (EditText) findViewById(R.id.edit_text);
         String hastext = text.getText().toString();
+
+        final_result = (TextView) findViewById(R.id.radio_question);
+        final_result.setEnabled(false);
 
         optionOne = (CheckBox) findViewById(R.id.first_question_option1);
         optionTwo = (CheckBox) findViewById(R.id.first_question_option2);
@@ -70,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String checkans(String addtext) {
         String msg = " ";
-        if (addtext.equals("abc")) {
+        if (addtext.equals("twelve")) {
             msg = "right";
         } else {
             msg = "wrong";
@@ -82,6 +89,27 @@ public class MainActivity extends AppCompatActivity {
         TextView text = (TextView) findViewById(R.id.edit_answer);
         text.setText(ans);
     }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        TextView text = (TextView) findViewById(R.id.radio_question);
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radioone:
+                if (checked) {
+                    text.setText("wrong");
+                }
+                break;
+            case R.id.radiotwo:
+                if (checked) {
+                    text.setText("right");
+                }
+                break;
+        }
+    }
+
 
     public void TheAnswer(View View) {
 
@@ -130,46 +158,6 @@ public class MainActivity extends AppCompatActivity {
     private void secondQuestion(String ansSecond) {
         TextView secondQuestionTextView = (TextView) findViewById(R.id.second_question);
         secondQuestionTextView.setText(ansSecond);
-    }
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.radio_one:
-                if (checked)
-                    break;
-            case R.id.radio_two:
-                if (checked)
-                    break;
-        }
-    }
-
-    public void RadioButton(View View) {
-
-        boolean hasradioone = radioone.isChecked();
-        boolean hasradiotwo = radiotwo.isChecked();
-
-        String ansMsg = bAnswer(hasradioone, hasradiotwo);
-        radioquestion(ansMsg);
-    }
-
-    private String bAnswer(boolean aradioone, boolean aradiotwo) {
-        String msg = "";
-        if ((aradioone)) {
-            msg = "wrong";
-        }
-        if ((aradiotwo)) {
-            msg = "Right";
-        }
-        return msg;
-    }
-
-    private void radioquestion(String ans) {
-        TextView firstQuestionTextView = (TextView) findViewById(R.id.first_question);
-        firstQuestionTextView.setText(ans);
     }
 
 
